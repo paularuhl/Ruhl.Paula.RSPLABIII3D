@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <!-- <script src="https://kit.fontawesome.com/3ed1bea591.js" crossorigin="anonymous"></script> -->
+    <script type="module" src="./js/scripts.js"></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    <title>Recuperatorio 2do Parcial Laboratorio III - RUHL Paula </title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img id="logo" src="./img/logo.png" alt="logo con estrellitas">
+        </div>
+        <ul>
+            <li> <a href="#aboutUs">Nosotros</a> </li>
+            <li> <a href="#news">Anuncios</a> </li>
+            <li> <a href="#blog">Blog</a> </li>
+            <li> <a href="#contact">Contacto</a> </li>
+        </ul>
+    </header>
+    <main>
+        <div class="encabezadoAdmin">
+            <h1>ADMINISTRACIÓN</h1>
+        </div>
+
+        <div class="encabezadoAdmin">
+            <img src="./img/autos_admin.png" alt="Autos">
+        </div>
+        <section class="container " id="dataIn">
+            <form class="col">
+                <fieldset>
+                    <legend> Información del anuncio </legend>
+                    <div class="big">
+                        <i class="fas fa-car"></i>
+                        <label class="col-form-label" for="txtTitulo">
+                            Titulo:
+                        </label>
+                        <input type="text" name="titulo" class="big" id="txtTitulo" required>
+                    </div>
+                    <br>
+                    <br>
+                    <fieldset>
+                        <legend><i class="fas fa-exchange-alt"></i> Transaccion </legend>
+                        <label class="col-form-label" for="rdoS"><input type="radio" name="transaction" value="sell"
+                                id="rdoS" checked>
+                            Venta</label> <br>
+                        <label class="col-form-label" for="rdoR"><input type="radio" name="transaction" value="rent"
+                                id="rdoR">
+                            Alquiler</label>
+                        <br>
+                    </fieldset>
+                    <br>
+                    <br>
+                    <div class="big">
+                        <i class="fas fa-file-alt"></i>
+                        <label class="col-form-label" for="txtDescripcion">
+                            Descripcion:
+                        </label>
+                        <input type="text" name="descripcion" class="big" id="txtDescripcion" required>
+                    </div>
+
+                    <br><br>
+                    <div class="big">
+                        <i class="far fa-money-bill-alt"></i>
+                        <label class="col-form-label" for="txtPrecio">
+                            Precio:
+                        </label>
+                        <input type="number" name="precio" class="big" id="txtPrecio" required>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-4 col-xl-4">
+
+                            <label class="col-form-label"> <i class="fas fa-door-open"></i> Puertas
+                                <input type="number" name="puertas" id="txtPuertas" placeholder="Puertas" required>
+                            </label> </div>
+                        <div class="col-lg-4 col-xl-4">
+                            <label class="col-form-label"> <i class="fas fa-tachometer-alt"></i> Kilómetros
+                                <input type="number" name="kms" id="txtKMs" class="tiny" placeholder="KMs" required>
+                            </label> </div>
+                        <div class="col-lg-4 col-xl-4">
+                            <label class="col-form-label"> <i class="fas fa-fighter-jet"></i> Potencia
+                                <input type="number" name="potencia" id="txtPotencia" class="tiny"
+                                    placeholder="Potencia" required>
+                            </label>
+                        </div>
+
+                    </div>
+                    <br>
+                    <fieldset>
+                        <legend><i class="fas fa-paint-brush"></i> Color </legend>
+                        <div class="row">
+                            <label class="col-form-label"><input name="color" type="checkbox" id="cbRojo" value="rojo">
+                                Rojo </label><br>
+                            <label class="col-form-label"><input name="color" type="checkbox" id="cbBlanco"
+                                    value="blanco"> Blanco </label><br>
+                            <label class="col-form-label"><input name="color" type="checkbox" id="cbNegro"
+                                    value="negro"> Negro </label><br>
+                        </div>
+
+                    </fieldset>
+                    <br>
+                    <input type="number" id="txtID" hidden>
+
+                </fieldset>
+                <div class="botones">
+                    <button id="btnGuardar" type="submit"> <i class="far fa-save"></i>
+                        Guardar</button>
+                    <button id="btnModificar" disabled> <i class="fas fa-edit"></i> Modificar</button>
+                    <button id="btnEliminar" disabled> <i class="fas fa-trash-alt"></i>Eliminar</button>
+                </div>
+
+            </form>
+        </section>
+        <section class="container">
+            <div class="col-12 text-center filtrarTransaccion row">
+                <div class="dropdown col-md-12 col-lg-3">
+                    <label for="filtro"><i class="fas fa-filter"></i>FILTRAR TRANSACCION </label>
+                    <select name="filtro" class="btn" id="filterTransaction">
+                        <option class="btn dropdown-item" id="btnFiltroTodos" value="N/A"> </option>
+                        <option class="btn dropdown-item" id="btnFiltroAlquiler" value="alquiler"> Alquiler </option>
+                        <option class="btn dropdown-item" id="btnFiltroVenta" value="venta">Venta </option>
+                    </select>
+                </div>
+
+                <div class="col-md-12 col-lg-3">
+                    <label id="lblPrecioPromedio" for="txtPrecioPromedio">
+                        <i class="fas fa-percentage"></i> <i class="far fa-money-bill-alt"></i>
+                        Precio Promedio:
+                    </label>
+                    <input type="text" name="precioPromedio" id="txtPrecioPromedio" disabled>
+                </div>
+
+                <div class="col-md-12 col-lg-3">
+                    <label id="lblPrecioMaximo" for="txtPrecioMaximo">
+                        <i class="fas fa-comments-dollar"></i>
+                        Precio Maximo:
+                    </label>
+                    <input type="text" name="precioMaximo" id="txtPrecioMaximo" disabled>
+                </div>
+
+                <div class="col-md-12 col-lg-3">
+                    <label id="lblPrecioMinimo" for="txtPrecioMinimo">
+                        <i class="fas fa-comment-dollar"></i>
+                        Precio Minimo:
+                    </label>
+                    <input type="text" name="precioMinimo" id="txtPrecioMinimo" disabled>
+                </div>
+
+                <div class="col-md-12 col-lg-3">
+                    <label id="lblPromedioPotencia" for="txtPromedioPotencia">
+                        <i class="fas fa-percentage"></i> <i class="fas fa-fighter-jet"></i>
+                        Promedio Potencia:
+                    </label>
+                    <input type="text" name="promedioPotencia" id="txtPromedioPotencia" disabled>
+                </div>
+            </div>
+            <br>
+            <br>
+        </section>
+        <section class="container">
+
+            <div class="row col-12 text-center custom-control custom-checkbox" id="contenedor-checkboxs">
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="cbox custom-control-input" id="cboxid" value="id" checked>
+                    <label class="custom-control-label" for="cboxid">Id</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="cbox custom-control-input" id="cboxtitulo" value="titulo" checked>
+                    <label class="custom-control-label" for="cboxtitulo">Titulo</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="cbox custom-control-input" id="cboxtransaccion" value="transaccion"
+                        checked>
+                    <label class="custom-control-label" for="cboxtransaccion">Transaccion</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="cbox custom-control-input" id="cboxdescripcion" value="descripcion"
+                        checked>
+                    <label class="custom-control-label" for="cboxdescripcion">Descripcion</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="cbox custom-control-input" id="cboxprecio" value="precio" checked>
+                    <label class="custom-control-label" for="cboxprecio">Precio</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="cbox custom-control-input" id="cboxnum_puertas" value="num_puertas"
+                        checked>
+                    <label class="custom-control-label" for="cboxnum_puertas">Puertas</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="cbox custom-control-input" id="cboxnum_KMs" value="num_KMs" checked>
+                    <label class="custom-control-label" for="cboxnum_KMs">KMs</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="cbox custom-control-input" id="cboxpotencia" value="potencia" checked>
+                    <label class="custom-control-label" for="cboxpotencia">Potencia</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="cbox custom-control-input" id="cboxcolores" value="colores" checked>
+                    <label class="custom-control-label" for="cboxcolores">Colores</label>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="container">
+
+
+            <div class="row">
+                <div class="col-12 text-center" id="divSpinner">
+                </div>
+                <div class="col-12" id="divTabla">
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+    <footer>
+
+        <ul id="bottomLinks">
+            <li> <a href="#aboutUs">Nosotros</a> </li>
+            <li> <a href="#news">Anuncios</a> </li>
+            <li> <a href="#blog">Blog</a> </li>
+            <li> <a href="#contact">Contacto</a> </li>
+        </ul>
+        <h4>Todos los derechos reservados 2019 (c)</h4>
+    </footer>
+</body>
+
+</html>

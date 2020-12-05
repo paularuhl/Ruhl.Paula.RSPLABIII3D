@@ -1,0 +1,139 @@
+{
+  "anuncios": [
+    {
+      "id": 1,
+      "titulo": "GMC",
+      "transaccion": "alquiler",
+      "descripcion": "Savana 3500",
+      "precio": 5940092,
+      "num_puertas": 4,
+      "num_KMs": 80352,
+      "potencia": 6112,
+      "colores": [
+        "rojo",
+        "blanco"
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Ford",
+      "transaccion": "alquiler",
+      "descripcion": "Econoline E250",
+      "precio": 5107498,
+      "num_puertas": 3,
+      "num_KMs": 54836,
+      "potencia": 6767,
+      "colores": [
+        "rojo",
+        "blanco"
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "GMC",
+      "transaccion": "rent",
+      "descripcion": "Savana",
+      "precio": "9651916",
+      "num_KMs": "64607",
+      "num_puertas": "2",
+      "potencia": "12312",
+      "colores": [
+        "negro"
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "Audi",
+      "transaccion": "venta",
+      "descripcion": "SL-Class",
+      "precio": 3975066,
+      "num_puertas": 3,
+      "num_KMs": 18577,
+      "potencia": 12830,
+      "colores": [
+        "rojo"
+      ]
+    },
+    {
+      "id": 5,
+      "titulo": "Mitsubishi",
+      "transaccion": "alquiler",
+      "descripcion": "Raider",
+      "precio": 73463993,
+      "num_puertas": 5,
+      "num_KMs": 1283,
+      "potencia": 1877,
+      "colores": [
+        "rojo"
+      ]
+    },
+    {
+      "id": 6,
+      "titulo": "GMC",
+      "transaccion": "alquiler",
+      "descripcion": "Savana 3500",
+      "precio": 5940092,
+      "num_puertas": 4,
+      "num_KMs": 80352,
+      "potencia": 6112,
+      "colores": [
+        "rojo",
+        "negro"
+      ]
+    },
+    {
+      "id": 7,
+      "titulo": "Llanero",
+      "transaccion": "alquiler",
+      "descripcion": "Econoline E250",
+      "precio": 5107498,
+      "num_puertas": 3,
+      "num_KMs": 54836,
+      "potencia": 6767,
+      "colores": [
+        "rojo",
+        "negro"
+      ]
+    },
+    {
+      "id": 9,
+      "titulo": "Honda",
+      "transaccion": "venta",
+      "descripcion": "SL-Class",
+      "precio": 3975066,
+      "num_puertas": 3,
+      "num_KMs": 52438,
+      "potencia": 12830,
+      "colores": [
+        "negro"
+      ]
+    },
+    {
+      "id": 10,
+      "titulo": "Mitsubishi",
+      "transaccion": "rent",
+      "descripcion": "Raider",
+      "precio": 7346993,
+      "num_KMs": 320479,
+      "num_puertas": "2",
+      "potencia": 1857,
+      "colores": [
+        "blanco",
+        "negro"
+      ]
+    },
+    {
+      "id": 12,
+      "titulo": "Fiat",
+      "transaccion": "alquiler",
+      "descripcion": "Uno",
+      "precio": 23231,
+      "num_puertas": 5,
+      "num_KMs": 30479,
+      "potencia": 18577,
+      "colores": [
+        "blanco"
+      ]
+    }
+  ]
+}

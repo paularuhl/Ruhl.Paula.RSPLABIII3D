@@ -1,0 +1,220 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    top:0px; 
+}
+
+main{
+    position:absolute; 
+    top:140px; 
+    bottom:140px; 
+    left:0px; 
+    right:0px; 
+    overflow:auto;
+}
+
+footer {
+    bottom:0px; 
+    text-align: center;
+    flex-direction: row;
+}
+
+header, footer{
+    display: flex;
+    justify-content: space-between; 
+    position:absolute;
+    left:0px; 
+    height:140px; 
+    right:0px;
+    overflow:hidden;
+    background-color:lightblue;
+}
+
+header ul {
+    padding-right: 30px;
+}
+
+#logo{
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    
+}
+.containerForm{
+    justify-content: center;
+}
+
+.encabezadoAdmin{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+ }
+
+form{
+    padding: 10px;
+    margin: 10px;
+}
+
+input{
+    padding: 10px;
+}
+
+.big{    
+    display: flex;
+    justify-content: flex-start;
+}
+
+.big input {
+    flex: 1;
+}
+
+.big i, .big img, .big label{
+    padding: 5px;
+    align-self: center;
+    justify-self: center;
+}
+
+.botones{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+button{
+    margin-right: 2px;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button#btnGuardar{
+    background-color: #acffb7;
+}
+
+button#btnModificar{
+    background-color: #bfd2fc;
+}
+
+button#btnEliminar{
+    padding: 7px;
+    background-color: #fcbfc4;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table, th, td{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+thead{
+    background-color: lightcoral;
+}
+
+tbody tr:hover{
+    background-color: #ffc7cc;
+    cursor: pointer;
+}
+
+
+ul{
+    justify-self: flex-end;
+    padding: 10px;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+#bottomLinks{
+    display: inline-block;
+    display: flex;
+    padding: 20px;
+}
+
+ #bottomLinks li {
+     padding-right: 10px;
+ }
+
+h4{
+    padding-top: 15px;
+    display:inline-block;
+}
+
+
+fieldset legend{
+    text-align:  center;
+    width: 50%;
+}
+
+fieldset{
+    border:  1px solid black;
+    padding: 20px;
+}
+
+fieldset fieldset{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+fieldset label, fieldset input{
+    cursor: pointer;
+}
+
+fieldset fieldset label{
+    padding: 20px;
+
+}
+
+
+
+.filtrarTransaccion{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-color:black;
+    background-color: grey;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.filtrarTransaccion div{
+    margin: 20px;
+}
+
+#filterTransaction{
+    background-color: white;
+    width: 100%;
+}
+
+/* media query para ocultar la imagen */
+@media only screen and (max-width: 900px) {
+    .encabezadoAdmin img{
+      display: none;
+    }
+  }
